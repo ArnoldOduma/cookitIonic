@@ -1,20 +1,41 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+<ion-header [translucent]="false">
+    <ion-searchbar id="searchBar" animated></ion-searchbar>
+    <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [forceOverscroll]="true">
+    <ion-tabs>
+        <ion-tab-bar slot="top">
+            <ion-tab-button tab="breakfast">
+                <ion-label>breakfast</ion-label>
+            </ion-tab-button>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+            <ion-tab-button tab="lunch">
+                <ion-label>lunch</ion-label>
+            </ion-tab-button>
+
+            <ion-tab-button tab="dinner">
+                <ion-label>dinner</ion-label>
+            </ion-tab-button>
+
+            <ion-tab-button tab="news">
+                <ion-label>news</ion-label>
+                <ion-badge>6</ion-badge>
+            </ion-tab-button>
+        </ion-tab-bar>
+    </ion-tabs>
+    <!--    </ion-header>-->
+
+    <div id="container">
+
+        <ion-content
+                [forceOverscroll]="true"
+        >
+            <ion-router-outlet></ion-router-outlet>
+        </ion-content>
+
+
+    </div>
 </ion-content>
+
